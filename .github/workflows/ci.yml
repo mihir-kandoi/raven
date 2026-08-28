@@ -88,6 +88,7 @@ jobs:
           bench new-site --db-root-password root --admin-password admin test_site
           bench --site test_site install-app raven
           bench build
+          bench --site test_site execute raven.api.search.rebuild_search_index
         env:
           CI: "Yes"
 
